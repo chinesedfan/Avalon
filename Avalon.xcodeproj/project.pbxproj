@@ -35,8 +35,8 @@
 		275526051A61692C009CCEDB /* ALRoleBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleBoardViewController.h; path = Controllers/ALRoleBoardViewController.h; sourceTree = "<group>"; };
 		275526061A61692C009CCEDB /* ALRoleBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleBoardViewController.m; path = Controllers/ALRoleBoardViewController.m; sourceTree = "<group>"; };
 		275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALRoleBoardViewController.xib; path = Controllers/ALRoleBoardViewController.xib; sourceTree = "<group>"; };
-		2755260A1A616AF9009CCEDB /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
 		2755260B1A616BCC009CCEDB /* ALDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDefinition.h; path = Model/ALDefinition.h; sourceTree = "<group>"; };
+		2755260C1A616F16009CCEDB /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		279C283E1A5FBF060094F467 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C28421A5FBF060094F467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C28431A5FBF060094F467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,9 +128,9 @@
 		279C28411A5FBF060094F467 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2755260C1A616F16009CCEDB /* Prefix.pch */,
 				279C28421A5FBF060094F467 /* Info.plist */,
 				279C28431A5FBF060094F467 /* main.m */,
-				2755260A1A616AF9009CCEDB /* Prefix.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Avalon/Prefix.h;
+				GCC_PREFIX_HEADER = Avalon/Prefix.pch;
 				INFOPLIST_FILE = Avalon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Avalon/Prefix.h;
+				GCC_PREFIX_HEADER = Avalon/Prefix.pch;
 				INFOPLIST_FILE = Avalon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
