@@ -8,19 +8,25 @@
 
 #import "ALModel.h"
 
-static NSArray *kKnownRoleTypeMap = nil;
-
 @implementation ALRole
 
 - (BOOL)isKnown:(ALRole *)otherRole {
-    NSArray *knownArray = kKnownRoleTypeMap[_roleType];
-    for (NSInteger i = 0; i < knownArray.count; i++) {
-        NSInteger type = [knownArray[i] integerValue];
-        if (otherRole.roleType == type) {
-            return YES;
-        }
+    ALRoleType otherType = otherRole.roleType;
+    switch (_roleType) {
+        case ALRoleTypeMerlin:
+            return (otherType == ALRoleTypeMorgana || otherType == ALRoleTypeOberon ||
+                    otherType == ALRoleTypeAssassinator || otherType == ALRoleTypePawn);
+        case ALRoleTypePercival:
+            return (otherType == ALRoleTypeMerlin || otherType == ALRoleTypeMorgana);
+        case ALRoleTypeMorgana:
+        case ALRoleTypeAssassinator:
+        case ALRoleTypeMordred:
+        case ALRoleTypePawn:
+            return (otherType != _roleType) && (otherType == ALRoleTypeMorgana ||
+                    otherType == ALRoleTypeAssassinator || otherType == ALRoleTypePawn);
+        default:
+            return NO;
     }
-    return false;
 }
 
 + (id)initWithRoleType:(ALRoleType)roleType {
@@ -29,9 +35,29 @@ static NSArray *kKnownRoleTypeMap = nil;
     return role;
 }
 
-+ (NSInteger)getRoleNumByPlayerNum:(NSInteger)playerNum {
-    // TODO:
-    return 0;
++ (NSInteger)getRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum {
+    if (playerNum < MIN_PLAYER_NUM || playerNum >= MAX_PLAYER_NUM) {
+        NSLog(@"Unsupported player num: %ld", playerNum);
+        return 0;
+    }
+    
+    // The Player Num:  5 6 7 8 9 10
+    // The Authur's:    3 4 4 5 6 6
+    // The Mordred's:   2 2 3 3 3 4
+    NSDictionary *roleNumMap = @{
+        @(ALRoleTypeMerlin):    @[@1, @1, @1, @1, @1, @1],
+        @(ALRoleTypePercival):  @[@0, @0, @1, @1, @1, @1],
+        @(ALRoleTypeLoyalist):  @[@2, @3, @2, @3, @4, @4],
+        
+        @(ALRoleTypeMorgana):       @[@0, @0, @1, @1, @1, @1],
+        @(ALRoleTypeAssassinator):  @[@1, @1, @1, @1, @1, @1],
+        @(ALRoleTypeMordred):       @[@0, @0, @0, @0, @0, @1],
+        @(ALRoleTypeOberon):        @[@0, @0, @0, @0, @0, @1],
+        @(ALRoleTypePawn):          @[@1, @1, @1, @1, @1, @0]
+    };
+    
+    NSArray *roleNumArray = [roleNumMap objectForKey:[NSNumber numberWithInteger:type]];
+    return [roleNumArray[playerNum - MIN_PLAYER_NUM] integerValue];
 }
 
 @end
@@ -88,7 +114,7 @@ static NSArray *kKnownRoleTypeMap = nil;
     
     ALLineup *lineup = [[ALLineup alloc] init];
     for (ALRoleType i = 0; i < ALRoleTypeMax; i++) {
-        NSInteger roleCount = [ALRole getRoleNumByPlayerNum:playerNum];
+        NSInteger roleCount = [ALRole getRoleNumFor:i withPlayerNum:playerNum];
         for (NSInteger j = 0; j < roleCount; j++) {
             ALRole *role = [ALRole initWithRoleType:i];
             [lineup.roleArray addObject:role];
