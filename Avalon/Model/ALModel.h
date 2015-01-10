@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALDefinations.h"
 
 typedef enum {
     // the Author's

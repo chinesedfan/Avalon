@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
+		275526081A61692C009CCEDB /* ALRoleBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526061A61692C009CCEDB /* ALRoleBoardViewController.m */; };
+		275526091A61692C009CCEDB /* ALRoleBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */; };
 		279C28441A5FBF060094F467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28431A5FBF060094F467 /* main.m */; };
 		279C28471A5FBF060094F467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28461A5FBF060094F467 /* AppDelegate.m */; };
 		279C284A1A5FBF060094F467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28491A5FBF060094F467 /* ViewController.m */; };
@@ -30,7 +32,11 @@
 /* Begin PBXFileReference section */
 		275526011A611894009CCEDB /* ALModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALModel.h; path = Model/ALModel.h; sourceTree = "<group>"; };
 		275526021A611894009CCEDB /* ALModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALModel.m; path = Model/ALModel.m; sourceTree = "<group>"; };
-		275526041A611D73009CCEDB /* ALDefinations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDefinations.h; sourceTree = "<group>"; };
+		275526051A61692C009CCEDB /* ALRoleBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleBoardViewController.h; path = Controllers/ALRoleBoardViewController.h; sourceTree = "<group>"; };
+		275526061A61692C009CCEDB /* ALRoleBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleBoardViewController.m; path = Controllers/ALRoleBoardViewController.m; sourceTree = "<group>"; };
+		275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALRoleBoardViewController.xib; path = Controllers/ALRoleBoardViewController.xib; sourceTree = "<group>"; };
+		2755260A1A616AF9009CCEDB /* Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		2755260B1A616BCC009CCEDB /* ALDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDefinition.h; path = Model/ALDefinition.h; sourceTree = "<group>"; };
 		279C283E1A5FBF060094F467 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C28421A5FBF060094F467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C28431A5FBF060094F467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,9 +73,9 @@
 		275525FF1A611831009CCEDB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2755260B1A616BCC009CCEDB /* ALDefinition.h */,
 				275526011A611894009CCEDB /* ALModel.h */,
 				275526021A611894009CCEDB /* ALModel.m */,
-				275526041A611D73009CCEDB /* ALDefinations.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -77,6 +83,9 @@
 		275526001A611839009CCEDB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				275526051A61692C009CCEDB /* ALRoleBoardViewController.h */,
+				275526061A61692C009CCEDB /* ALRoleBoardViewController.m */,
+				275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 			children = (
 				279C28421A5FBF060094F467 /* Info.plist */,
 				279C28431A5FBF060094F467 /* main.m */,
+				2755260A1A616AF9009CCEDB /* Prefix.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275526091A61692C009CCEDB /* ALRoleBoardViewController.xib in Resources */,
 				279C284D1A5FBF060094F467 /* Main.storyboard in Resources */,
 				279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */,
 				279C284F1A5FBF060094F467 /* Images.xcassets in Resources */,
@@ -244,6 +255,7 @@
 			files = (
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
+				275526081A61692C009CCEDB /* ALRoleBoardViewController.m in Sources */,
 				275526031A611894009CCEDB /* ALModel.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
 			);
@@ -369,6 +381,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Avalon/Prefix.h;
 				INFOPLIST_FILE = Avalon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +393,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Avalon/Prefix.h;
 				INFOPLIST_FILE = Avalon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
