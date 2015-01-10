@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
 		279C28441A5FBF060094F467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28431A5FBF060094F467 /* main.m */; };
 		279C28471A5FBF060094F467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28461A5FBF060094F467 /* AppDelegate.m */; };
 		279C284A1A5FBF060094F467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28491A5FBF060094F467 /* ViewController.m */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275526011A611894009CCEDB /* ALModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALModel.h; path = Model/ALModel.h; sourceTree = "<group>"; };
+		275526021A611894009CCEDB /* ALModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALModel.m; path = Model/ALModel.m; sourceTree = "<group>"; };
+		275526041A611D73009CCEDB /* ALDefinations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDefinations.h; sourceTree = "<group>"; };
 		279C283E1A5FBF060094F467 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C28421A5FBF060094F467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C28431A5FBF060094F467 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275525FF1A611831009CCEDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				275526011A611894009CCEDB /* ALModel.h */,
+				275526021A611894009CCEDB /* ALModel.m */,
+				275526041A611D73009CCEDB /* ALDefinations.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		275526001A611839009CCEDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		279C28351A5FBF060094F467 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +102,8 @@
 		279C28401A5FBF060094F467 /* Avalon */ = {
 			isa = PBXGroup;
 			children = (
+				275526001A611839009CCEDB /* Controllers */,
+				275525FF1A611831009CCEDB /* Model */,
 				279C28451A5FBF060094F467 /* AppDelegate.h */,
 				279C28461A5FBF060094F467 /* AppDelegate.m */,
 				279C28481A5FBF060094F467 /* ViewController.h */,
@@ -221,6 +244,7 @@
 			files = (
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
+				275526031A611894009CCEDB /* ALModel.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +438,7 @@
 				279C28631A5FBF060094F467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		279C28641A5FBF060094F467 /* Build configuration list for PBXNativeTarget "AvalonTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +447,7 @@
 				279C28661A5FBF060094F467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
