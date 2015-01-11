@@ -10,6 +10,7 @@
 		273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E888D1A621C2000C21620 /* ALPlayerCellView.m */; };
 		273E88911A62208100C21620 /* ALRoleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88901A62208100C21620 /* ALRoleCellView.m */; };
 		273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88931A62277200C21620 /* ALCellContainerViewController.m */; };
+		273E88971A62403600C21620 /* ALLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88961A62403600C21620 /* ALLineupViewController.m */; };
 		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
 		279C28441A5FBF060094F467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28431A5FBF060094F467 /* main.m */; };
 		279C28471A5FBF060094F467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28461A5FBF060094F467 /* AppDelegate.m */; };
@@ -37,6 +38,8 @@
 		273E88901A62208100C21620 /* ALRoleCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleCellView.m; path = Views/ALRoleCellView.m; sourceTree = "<group>"; };
 		273E88921A62277200C21620 /* ALCellContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCellContainerViewController.h; path = Controllers/ALCellContainerViewController.h; sourceTree = "<group>"; };
 		273E88931A62277200C21620 /* ALCellContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCellContainerViewController.m; path = Controllers/ALCellContainerViewController.m; sourceTree = "<group>"; };
+		273E88951A62403600C21620 /* ALLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALLineupViewController.h; path = Controllers/ALLineupViewController.h; sourceTree = "<group>"; };
+		273E88961A62403600C21620 /* ALLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALLineupViewController.m; path = Controllers/ALLineupViewController.m; sourceTree = "<group>"; };
 		275526011A611894009CCEDB /* ALModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALModel.h; path = Model/ALModel.h; sourceTree = "<group>"; };
 		275526021A611894009CCEDB /* ALModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALModel.m; path = Model/ALModel.m; sourceTree = "<group>"; };
 		2755260B1A616BCC009CCEDB /* ALDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDefinition.h; path = Model/ALDefinition.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				273E88921A62277200C21620 /* ALCellContainerViewController.h */,
 				273E88931A62277200C21620 /* ALCellContainerViewController.m */,
+				273E88951A62403600C21620 /* ALLineupViewController.h */,
+				273E88961A62403600C21620 /* ALLineupViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
 				273E88911A62208100C21620 /* ALRoleCellView.m in Sources */,
+				273E88971A62403600C21620 /* ALLineupViewController.m in Sources */,
 				273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */,
 				275526031A611894009CCEDB /* ALModel.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
