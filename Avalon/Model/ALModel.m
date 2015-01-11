@@ -29,7 +29,7 @@
     }
 }
 
-+ (id)initWithRoleType:(ALRoleType)roleType {
++ (id)roleWithRoleType:(ALRoleType)roleType {
     ALRole *role = [[ALRole alloc] init];
     role.roleType = roleType;
     return role;
@@ -116,7 +116,7 @@
     for (ALRoleType i = 0; i < ALRoleTypeMax; i++) {
         NSInteger roleCount = [ALRole getRoleNumFor:i withPlayerNum:playerNum];
         for (NSInteger j = 0; j < roleCount; j++) {
-            ALRole *role = [ALRole initWithRoleType:i];
+            ALRole *role = [ALRole roleWithRoleType:i];
             [lineup.roleArray addObject:role];
         }
     }

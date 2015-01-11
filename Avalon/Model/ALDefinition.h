@@ -12,4 +12,6 @@
 #define MIN_PLAYER_NUM  5
 #define MAX_PLAYER_NUM  10
 
+#define i2s(i)  [NSString stringWithFormat:@"%ld", (i)]
+
 #endif

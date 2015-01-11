@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ALDefinition.h"
 
 typedef enum {
     // the Author's
@@ -26,11 +27,12 @@ typedef enum {
 @interface ALRole : NSObject
 
 @property (nonatomic, assign) ALRoleType roleType;
-@property (nonatomic, strong) NSString *roleName;
+@property (nonatomic, strong, readonly) NSString *roleName;
+@property (nonatomic, strong, readonly) NSString *roleImageName;
 
 - (BOOL)isKnown:(ALRole *)otherRole;
 
-+ (id)initWithRoleType:(ALRoleType)roleType;
++ (id)roleWithRoleType:(ALRoleType)roleType;
 + (NSInteger)getRoleNumFor:(ALRoleType) type withPlayerNum:(NSInteger)playerNum;
 
 @end

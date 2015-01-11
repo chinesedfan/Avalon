@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E888D1A621C2000C21620 /* ALPlayerCellView.m */; };
+		273E88911A62208100C21620 /* ALRoleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88901A62208100C21620 /* ALRoleCellView.m */; };
+		273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88931A62277200C21620 /* ALCellContainerViewController.m */; };
 		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
-		275526081A61692C009CCEDB /* ALRoleBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526061A61692C009CCEDB /* ALRoleBoardViewController.m */; };
-		275526091A61692C009CCEDB /* ALRoleBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */; };
 		279C28441A5FBF060094F467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28431A5FBF060094F467 /* main.m */; };
 		279C28471A5FBF060094F467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28461A5FBF060094F467 /* AppDelegate.m */; };
 		279C284A1A5FBF060094F467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28491A5FBF060094F467 /* ViewController.m */; };
@@ -30,11 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273E888C1A621C2000C21620 /* ALPlayerCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayerCellView.h; path = Views/ALPlayerCellView.h; sourceTree = "<group>"; };
+		273E888D1A621C2000C21620 /* ALPlayerCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayerCellView.m; path = Views/ALPlayerCellView.m; sourceTree = "<group>"; };
+		273E888F1A62208100C21620 /* ALRoleCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleCellView.h; path = Views/ALRoleCellView.h; sourceTree = "<group>"; };
+		273E88901A62208100C21620 /* ALRoleCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleCellView.m; path = Views/ALRoleCellView.m; sourceTree = "<group>"; };
+		273E88921A62277200C21620 /* ALCellContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCellContainerViewController.h; path = Controllers/ALCellContainerViewController.h; sourceTree = "<group>"; };
+		273E88931A62277200C21620 /* ALCellContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCellContainerViewController.m; path = Controllers/ALCellContainerViewController.m; sourceTree = "<group>"; };
 		275526011A611894009CCEDB /* ALModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALModel.h; path = Model/ALModel.h; sourceTree = "<group>"; };
 		275526021A611894009CCEDB /* ALModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALModel.m; path = Model/ALModel.m; sourceTree = "<group>"; };
-		275526051A61692C009CCEDB /* ALRoleBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleBoardViewController.h; path = Controllers/ALRoleBoardViewController.h; sourceTree = "<group>"; };
-		275526061A61692C009CCEDB /* ALRoleBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleBoardViewController.m; path = Controllers/ALRoleBoardViewController.m; sourceTree = "<group>"; };
-		275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALRoleBoardViewController.xib; path = Controllers/ALRoleBoardViewController.xib; sourceTree = "<group>"; };
 		2755260B1A616BCC009CCEDB /* ALDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDefinition.h; path = Model/ALDefinition.h; sourceTree = "<group>"; };
 		2755260C1A616F16009CCEDB /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		279C283E1A5FBF060094F467 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273E888B1A621BFE00C21620 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				273E888C1A621C2000C21620 /* ALPlayerCellView.h */,
+				273E888D1A621C2000C21620 /* ALPlayerCellView.m */,
+				273E888F1A62208100C21620 /* ALRoleCellView.h */,
+				273E88901A62208100C21620 /* ALRoleCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		275525FF1A611831009CCEDB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +98,8 @@
 		275526001A611839009CCEDB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				275526051A61692C009CCEDB /* ALRoleBoardViewController.h */,
-				275526061A61692C009CCEDB /* ALRoleBoardViewController.m */,
-				275526071A61692C009CCEDB /* ALRoleBoardViewController.xib */,
+				273E88921A62277200C21620 /* ALCellContainerViewController.h */,
+				273E88931A62277200C21620 /* ALCellContainerViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 		279C28401A5FBF060094F467 /* Avalon */ = {
 			isa = PBXGroup;
 			children = (
+				273E888B1A621BFE00C21620 /* Views */,
 				275526001A611839009CCEDB /* Controllers */,
 				275525FF1A611831009CCEDB /* Model */,
 				279C28451A5FBF060094F467 /* AppDelegate.h */,
@@ -232,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				275526091A61692C009CCEDB /* ALRoleBoardViewController.xib in Resources */,
 				279C284D1A5FBF060094F467 /* Main.storyboard in Resources */,
 				279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */,
 				279C284F1A5FBF060094F467 /* Images.xcassets in Resources */,
@@ -253,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */,
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
-				275526081A61692C009CCEDB /* ALRoleBoardViewController.m in Sources */,
+				273E88911A62208100C21620 /* ALRoleCellView.m in Sources */,
+				273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */,
 				275526031A611894009CCEDB /* ALModel.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
 			);
