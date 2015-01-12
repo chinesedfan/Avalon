@@ -9,6 +9,7 @@
 #import "ALLineupViewController.h"
 #import "ALCellContainerViewController.h"
 #import "ALRoleCellView.h"
+#import "ALPlayerViewController.h"
 
 @implementation ALLineupViewController {
     // UI
@@ -76,6 +77,16 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self updatePlayerNum:row + MIN_PLAYER_NUM];
+}
+
+#pragma mark - Action Handlers
+- (IBAction)confirmButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"LineupView2PlayerViewSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ALPlayerViewController *playerViewController = segue.destinationViewController;
+    playerViewController.lineup = _lineup;
 }
 
 @end

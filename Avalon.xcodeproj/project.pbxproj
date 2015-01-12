@@ -19,6 +19,7 @@
 		279C284F1A5FBF060094F467 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279C284E1A5FBF060094F467 /* Images.xcassets */; };
 		279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279C28501A5FBF060094F467 /* LaunchScreen.xib */; };
 		279C285E1A5FBF060094F467 /* AvalonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C285D1A5FBF060094F467 /* AvalonTests.m */; };
+		27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		279C28571A5FBF060094F467 /* AvalonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvalonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C285C1A5FBF060094F467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C285D1A5FBF060094F467 /* AvalonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvalonTests.m; sourceTree = "<group>"; };
+		27BC6FAB1A63D36F007B4909 /* ALPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayerViewController.h; path = Controllers/ALPlayerViewController.h; sourceTree = "<group>"; };
+		27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayerViewController.m; path = Controllers/ALPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				273E88931A62277200C21620 /* ALCellContainerViewController.m */,
 				273E88951A62403600C21620 /* ALLineupViewController.h */,
 				273E88961A62403600C21620 /* ALLineupViewController.m */,
+				27BC6FAB1A63D36F007B4909 /* ALPlayerViewController.h */,
+				27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			files = (
 				273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */,
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
+				27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
 				273E88911A62208100C21620 /* ALRoleCellView.m in Sources */,
 				273E88971A62403600C21620 /* ALLineupViewController.m in Sources */,

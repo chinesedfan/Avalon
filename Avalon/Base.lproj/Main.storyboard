@@ -38,6 +38,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BrZ-qS-KGS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-qW-Lwz" userLabel="customizedButton">
                                 <rect key="frame" x="16" y="54" width="150" height="34"/>
@@ -67,11 +70,38 @@
                         <outlet property="_customizedLineupButton" destination="x1U-qW-Lwz" id="jqf-9c-xdT"/>
                         <outlet property="_defaultLineupButton" destination="xve-fZ-dOU" id="yb7-8O-gKy"/>
                         <outlet property="_playerNumPicker" destination="Mkc-ti-TNx" id="aYq-La-p3z"/>
+                        <segue destination="gKf-as-52K" kind="presentation" identifier="LineupView2PlayerViewSegue" id="Szu-cs-zFo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="375" y="359"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="Tt9-Xx-jtg">
+            <objects>
+                <viewController id="gKf-as-52K" customClass="ALPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ygv-36-V2R"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYC-MW-9s7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EQa-CS-EaF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugN-5W-hID" userLabel="roleTipsLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iii-YF-zJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="141"/>
         </scene>
     </scenes>
 </document>
