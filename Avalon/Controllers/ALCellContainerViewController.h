@@ -12,5 +12,6 @@
 
 - (id)initWithRow:(NSInteger)row andCol:(NSInteger)col;
 - (void)addCell:(UIView *)cell;
+- (void)reset;
 
 @end

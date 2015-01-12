@@ -56,4 +56,8 @@
     [_cellArray addObject:cell];
 }
 
+- (void)reset {
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
 @end
