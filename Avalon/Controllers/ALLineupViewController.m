@@ -27,7 +27,7 @@
             @"confirmBtn": _confirmButton,
             @"numPicker": _playerNumPicker
     };
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[defaultBtn]-[numPicker]-[confirmBtn]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[defaultBtn][numPicker][confirmBtn]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
 }
 
 #pragma mark - PickerView DataSource
