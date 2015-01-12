@@ -40,23 +40,29 @@
     // width and height
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:cell attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0/_col constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:cell attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.0/_row constant:0]];
+    
     // top and left
-    UIView *topView = self.view, *leftView = self.view;
-    NSInteger curRow = _cellArray.count/_row, curCol = _cellArray.count%_row;
+    NSInteger curRow = _cellArray.count/_col, curCol = _cellArray.count%_col;
     if (curRow > 0) {
-        topView = _cellArray[_cellArray.count - _col];
+        UIView *topView = _cellArray[_cellArray.count - _col];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topView][cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(topView, cell)]];
+    } else {
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(cell)]];
     }
+    
     if (curCol > 0) {
-        leftView = _cellArray[_cellArray.count - 1];
+        UIView *leftView = _cellArray[_cellArray.count - 1];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[leftView][cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(leftView, cell)]];
+    } else {
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(cell)]];
     }
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topView][cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(topView, cell)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[leftView][cell]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(leftView, cell)]];
     
     // save in the array
     [_cellArray addObject:cell];
 }
 
 - (void)reset {
+    [_cellArray removeAllObjects];
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
