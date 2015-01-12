@@ -27,9 +27,15 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+}
+
 - (void)addCell:(UIView *)cell {
     NSAssert(cell, @"Invalid cell");
     NSAssert(_cellArray.count < _row*_col, @"Reached the limit of cells.");
+    
+    [self.view addSubview:cell];
     
     // width and height
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:cell attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0/_col constant:0]];

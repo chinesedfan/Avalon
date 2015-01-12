@@ -11,7 +11,7 @@
 @implementation ALRoleCellView {
     ALRole *_role;
     
-    UIImageView *_roleImage;
+    UIImageView *_roleImageView;
     UIButton *_increaseButton;
     UIButton *_decreaseButton;
 }
@@ -20,13 +20,15 @@
     self = [super init];
     if (self) {
         _role = role;
+        [self configSubviews];
+        [self configConstraints];
     }
     return self;
 }
 
-- (void)config {
-    _roleImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_role.roleImageName]];
-    [self addSubview:_roleImage];
+- (void)configSubviews {
+    _roleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_role.roleImageName]];
+    [self addSubview:_roleImageView];
     
     _increaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_increaseButton addTarget:self action:@selector(increaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,6 +45,16 @@
 
 - (void)decreaseButtonAction:(UIButton *)sender {
     // TODO:
+}
+
+- (void)configConstraints {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    _roleImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    _increaseButton.translatesAutoresizingMaskIntoConstraints = NO;
+    _decreaseButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_roleImageView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_roleImageView)]];
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface ALRoleCellView : UIView
 
+- (id)initWithRole:(ALRole *)role;
+
 @end

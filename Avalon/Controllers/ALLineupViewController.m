@@ -7,17 +7,31 @@
 //
 
 #import "ALLineupViewController.h"
+#import "ALCellContainerViewController.h"
+#import "ALRoleCellView.h"
 
 @implementation ALLineupViewController {
+    // UI
     __weak IBOutlet UIButton *_defaultLineupButton;
     __weak IBOutlet UIButton *_customizedLineupButton;
     __weak IBOutlet UIButton *_confirmButton;
     
     __weak IBOutlet UIPickerView *_playerNumPicker;
+    
+    ALCellContainerViewController *_cellContainerViewController;
+    
+    // Data
+    ALLineup *_lineup;
 }
 
 - (void)viewDidLoad {
+    [self configSubviews];
     [self configConstraints];
+}
+
+- (void)configSubviews {
+    _cellContainerViewController = [[ALCellContainerViewController alloc] initWithRow:5 andCol:2];
+    [self.view addSubview:_cellContainerViewController.view];
 }
 
 - (void)configConstraints {
@@ -25,9 +39,24 @@
             @"defaultBtn": _defaultLineupButton,
             @"customizedBtn": _customizedLineupButton,
             @"confirmBtn": _confirmButton,
-            @"numPicker": _playerNumPicker
+            @"numPicker": _playerNumPicker,
+            @"containerView": _cellContainerViewController.view
     };
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[defaultBtn][numPicker][confirmBtn]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[numPicker][containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+}
+
+- (void)updatePlayerNum:(NSInteger)playerNum {
+    NSAssert((playerNum >= MIN_PLAYER_NUM && playerNum <= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
+    
+    _lineup = [ALLineup getDefaultLineupByPlayerNum:playerNum];
+    for (NSInteger i = 0; i < _lineup.roleArray.count; i++) {
+        ALRole *role = _lineup.roleArray[i];
+        ALRoleCellView *roleCellView = [[ALRoleCellView alloc] initWithRole:role];
+        [_cellContainerViewController addCell:roleCellView];
+    }
 }
 
 #pragma mark - PickerView DataSource
@@ -45,7 +74,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    // TODO:
+    [self updatePlayerNum:row + MIN_PLAYER_NUM];
 }
 
 @end
