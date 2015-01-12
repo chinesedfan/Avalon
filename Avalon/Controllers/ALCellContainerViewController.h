@@ -10,6 +10,7 @@
 
 @interface ALCellContainerViewController : UIViewController
 
+- (id)initWithRow:(NSInteger)row andCol:(NSInteger)col;
 - (void)addCell:(UIView *)cell;
 
 @end

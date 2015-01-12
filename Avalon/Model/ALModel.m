@@ -36,10 +36,7 @@
 }
 
 + (NSInteger)getRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum {
-    if (playerNum < MIN_PLAYER_NUM || playerNum >= MAX_PLAYER_NUM) {
-        NSLog(@"Unsupported player num: %ld", playerNum);
-        return 0;
-    }
+    NSAssert((playerNum < MIN_PLAYER_NUM || playerNum >= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
     // The Player Num:  5 6 7 8 9 10
     // The Authur's:    3 4 4 5 6 6
@@ -107,10 +104,7 @@
 }
 
 + (id)getDefaultLineupByPlayerNum:(NSInteger)playerNum {
-    if (playerNum < MIN_PLAYER_NUM || playerNum >= MAX_PLAYER_NUM) {
-        NSLog(@"Unsupported player num: %ld", playerNum);
-        return nil;
-    }
+    NSAssert((playerNum < MIN_PLAYER_NUM || playerNum >= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
     ALLineup *lineup = [[ALLineup alloc] init];
     for (ALRoleType i = 0; i < ALRoleTypeMax; i++) {
