@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [self configSubviews];
     [self configConstraints];
+    
+    [self updatePlayerNum:MIN_PLAYER_NUM];
 }
 
 - (void)configSubviews {

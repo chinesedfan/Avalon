@@ -98,6 +98,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="_roleTipsLabel" destination="ugN-5W-hID" id="6tT-o2-FHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iii-YF-zJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

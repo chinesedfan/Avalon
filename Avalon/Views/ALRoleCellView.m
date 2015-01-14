@@ -20,6 +20,7 @@
     self = [super init];
     if (self) {
         _role = role;
+
         [self configSubviews];
         [self configConstraints];
     }
@@ -37,6 +38,8 @@
     _decreaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_decreaseButton addTarget:self action:@selector(decreaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_decreaseButton];
+    
+    self.backgroundColor = [UIColor blueColor];
 }
 
 - (void)increaseButtonAction:(UIButton *)sender {

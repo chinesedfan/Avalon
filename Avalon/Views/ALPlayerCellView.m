@@ -9,6 +9,8 @@
 #import "ALPlayerCellView.h"
 
 @implementation ALPlayerCellView {
+    UILabel *_playerIdLabel;
+    
     NSInteger _playerId;
 }
 
@@ -16,14 +18,25 @@
     self = [super init];
     if (self) {
         _playerId = playerId;
+        
+        [self configSubviews];
+        [self configConstraints];
     }
     return self;
 }
 
-- (void)configIdLabel {
-    UILabel *idLabel = [[UILabel alloc] init];
-    idLabel.text = i2s(_playerId);
-    [self addSubview:idLabel];
+- (void)configSubviews {
+    _playerIdLabel = [[UILabel alloc] init];
+    _playerIdLabel.text = i2s(_playerId);
+    [self addSubview:_playerIdLabel];
+}
+
+- (void)configConstraints {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    _playerIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_playerIdLabel]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_playerIdLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_playerIdLabel]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_playerIdLabel)]];
 }
 
 @end

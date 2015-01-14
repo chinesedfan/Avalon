@@ -61,6 +61,14 @@
 
 @implementation ALPlayer
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        _knownArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end
 
 @implementation ALLineup
@@ -83,6 +91,7 @@
         ALPlayer *player = [[ALPlayer alloc] init];
         player.playerId = i;
         player.role = _roleArray[i];
+        [playerArray addObject:player];
     }
     
     // different players know different players
