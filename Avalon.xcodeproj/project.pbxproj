@@ -20,6 +20,12 @@
 		279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279C28501A5FBF060094F467 /* LaunchScreen.xib */; };
 		279C285E1A5FBF060094F467 /* AvalonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C285D1A5FBF060094F467 /* AvalonTests.m */; };
 		27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */; };
+		27F6987D1A6BA2FA00C33C70 /* ALMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6987C1A6BA2FA00C33C70 /* ALMaskViewController.m */; };
+		27F698801A6BA4BA00C33C70 /* ALAssignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6987F1A6BA4BA00C33C70 /* ALAssignViewController.m */; };
+		27F698831A6BA50C00C33C70 /* ALVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F698821A6BA50C00C33C70 /* ALVoteViewController.m */; };
+		27F698861A6BA5BE00C33C70 /* ALExecuteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F698851A6BA5BE00C33C70 /* ALExecuteViewController.m */; };
+		27F698891A6BAAA100C33C70 /* ALTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F698881A6BAAA100C33C70 /* ALTaskViewController.m */; };
+		27F6988C1A6BAAD400C33C70 /* ALCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6988B1A6BAAD400C33C70 /* ALCheckViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,18 @@
 		279C285D1A5FBF060094F467 /* AvalonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvalonTests.m; sourceTree = "<group>"; };
 		27BC6FAB1A63D36F007B4909 /* ALPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayerViewController.h; path = Controllers/ALPlayerViewController.h; sourceTree = "<group>"; };
 		27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayerViewController.m; path = Controllers/ALPlayerViewController.m; sourceTree = "<group>"; };
+		27F6987B1A6BA2FA00C33C70 /* ALMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALMaskViewController.h; path = Controllers/ALMaskViewController.h; sourceTree = "<group>"; };
+		27F6987C1A6BA2FA00C33C70 /* ALMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALMaskViewController.m; path = Controllers/ALMaskViewController.m; sourceTree = "<group>"; };
+		27F6987E1A6BA4BA00C33C70 /* ALAssignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAssignViewController.h; path = Controllers/ALAssignViewController.h; sourceTree = "<group>"; };
+		27F6987F1A6BA4BA00C33C70 /* ALAssignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALAssignViewController.m; path = Controllers/ALAssignViewController.m; sourceTree = "<group>"; };
+		27F698811A6BA50C00C33C70 /* ALVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALVoteViewController.h; path = Controllers/ALVoteViewController.h; sourceTree = "<group>"; };
+		27F698821A6BA50C00C33C70 /* ALVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALVoteViewController.m; path = Controllers/ALVoteViewController.m; sourceTree = "<group>"; };
+		27F698841A6BA5BE00C33C70 /* ALExecuteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALExecuteViewController.h; path = Controllers/ALExecuteViewController.h; sourceTree = "<group>"; };
+		27F698851A6BA5BE00C33C70 /* ALExecuteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALExecuteViewController.m; path = Controllers/ALExecuteViewController.m; sourceTree = "<group>"; };
+		27F698871A6BAAA100C33C70 /* ALTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALTaskViewController.h; path = Controllers/ALTaskViewController.h; sourceTree = "<group>"; };
+		27F698881A6BAAA100C33C70 /* ALTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALTaskViewController.m; path = Controllers/ALTaskViewController.m; sourceTree = "<group>"; };
+		27F6988A1A6BAAD400C33C70 /* ALCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCheckViewController.h; path = Controllers/ALCheckViewController.h; sourceTree = "<group>"; };
+		27F6988B1A6BAAD400C33C70 /* ALCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCheckViewController.m; path = Controllers/ALCheckViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,18 @@
 				273E88961A62403600C21620 /* ALLineupViewController.m */,
 				27BC6FAB1A63D36F007B4909 /* ALPlayerViewController.h */,
 				27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */,
+				27F6987B1A6BA2FA00C33C70 /* ALMaskViewController.h */,
+				27F6987C1A6BA2FA00C33C70 /* ALMaskViewController.m */,
+				27F6987E1A6BA4BA00C33C70 /* ALAssignViewController.h */,
+				27F6987F1A6BA4BA00C33C70 /* ALAssignViewController.m */,
+				27F698811A6BA50C00C33C70 /* ALVoteViewController.h */,
+				27F698821A6BA50C00C33C70 /* ALVoteViewController.m */,
+				27F698841A6BA5BE00C33C70 /* ALExecuteViewController.h */,
+				27F698851A6BA5BE00C33C70 /* ALExecuteViewController.m */,
+				27F698871A6BAAA100C33C70 /* ALTaskViewController.h */,
+				27F698881A6BAAA100C33C70 /* ALTaskViewController.m */,
+				27F6988A1A6BAAD400C33C70 /* ALCheckViewController.h */,
+				27F6988B1A6BAAD400C33C70 /* ALCheckViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -277,15 +307,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F698891A6BAAA100C33C70 /* ALTaskViewController.m in Sources */,
 				273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */,
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
 				273E88911A62208100C21620 /* ALRoleCellView.m in Sources */,
 				273E88971A62403600C21620 /* ALLineupViewController.m in Sources */,
+				27F698801A6BA4BA00C33C70 /* ALAssignViewController.m in Sources */,
+				27F698831A6BA50C00C33C70 /* ALVoteViewController.m in Sources */,
+				27F698861A6BA5BE00C33C70 /* ALExecuteViewController.m in Sources */,
 				273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */,
 				275526031A611894009CCEDB /* ALModel.m in Sources */,
+				27F6988C1A6BAAD400C33C70 /* ALCheckViewController.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
+				27F6987D1A6BA2FA00C33C70 /* ALMaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

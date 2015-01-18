@@ -9,7 +9,7 @@
 #import "ALLineupViewController.h"
 #import "ALCellContainerViewController.h"
 #import "ALRoleCellView.h"
-#import "ALPlayerViewController.h"
+#import "ALMaskViewController.h"
 
 @implementation ALLineupViewController {
     // UI
@@ -83,11 +83,11 @@
 
 #pragma mark - Action Handlers
 - (IBAction)confirmButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"LineupView2PlayerViewSegue" sender:self];
+    [self performSegueWithIdentifier:@"LineupView2MaskViewSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALPlayerViewController *playerViewController = segue.destinationViewController;
+    ALMaskViewController *playerViewController = segue.destinationViewController;
     playerViewController.lineup = _lineup;
 }
 

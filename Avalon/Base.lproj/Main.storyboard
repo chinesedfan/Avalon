@@ -70,12 +70,12 @@
                         <outlet property="_customizedLineupButton" destination="x1U-qW-Lwz" id="jqf-9c-xdT"/>
                         <outlet property="_defaultLineupButton" destination="xve-fZ-dOU" id="yb7-8O-gKy"/>
                         <outlet property="_playerNumPicker" destination="Mkc-ti-TNx" id="aYq-La-p3z"/>
-                        <segue destination="gKf-as-52K" kind="presentation" identifier="LineupView2PlayerViewSegue" id="Szu-cs-zFo"/>
+                        <segue destination="A0S-00-MD6" kind="show" identifier="LineupView2MaskViewSegue" id="Ukc-uR-omJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="359"/>
+            <point key="canvasLocation" x="223" y="209"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="Tt9-Xx-jtg">
@@ -100,11 +100,152 @@
                     </view>
                     <connections>
                         <outlet property="_roleTipsLabel" destination="ugN-5W-hID" id="6tT-o2-FHh"/>
+                        <segue destination="A0S-00-MD6" kind="show" identifier="PlayerView2MaskViewSegue" id="hNT-lz-5th"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iii-YF-zJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="141"/>
+            <point key="canvasLocation" x="1141" y="-665"/>
+        </scene>
+        <!--Assign View Controller-->
+        <scene sceneID="zSX-ub-mo4">
+            <objects>
+                <viewController id="zZ0-1q-9Ry" customClass="ALAssignViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0u-SX-4dN"/>
+                        <viewControllerLayoutGuide type="bottom" id="dqn-44-JiB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fAt-82-WMA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="IVV-Vg-zJP" kind="show" identifier="AssignView2VoteViewSegue" id="W6o-zK-dTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uu-wA-VGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="1085"/>
+        </scene>
+        <!--Vote View Controller-->
+        <scene sceneID="gSh-Wk-EHO">
+            <objects>
+                <viewController id="IVV-Vg-zJP" customClass="ALVoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DhT-DQ-qr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="emq-kW-vEU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyR-2p-WGb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="zZ0-1q-9Ry" kind="show" identifier="VoteView2AssignViewSegue" id="p63-mJ-NKY"/>
+                        <segue destination="MjZ-XE-TDd" kind="show" identifier="VoteView2ExecuteViewSegue" id="vWK-NK-hOy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xe-pd-CJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="1085"/>
+        </scene>
+        <!--Execute View Controller-->
+        <scene sceneID="Wmu-ns-Mz2">
+            <objects>
+                <viewController id="MjZ-XE-TDd" customClass="ALExecuteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dmf-yP-8nY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mri-0Z-cf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oeP-he-TIB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="A0S-00-MD6" kind="show" identifier="ExecuteView2MaskViewSegue" id="jyz-Lx-9qo"/>
+                        <segue destination="HP2-SK-LUz" kind="show" identifier="ExecuteView2TaskViewSegue" id="nRo-Hx-pZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXJ-7q-Cgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2829" y="1085"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="r2v-OU-hhK">
+            <objects>
+                <viewController id="HP2-SK-LUz" customClass="ALTaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tqp-3c-bDW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mQx-4x-WEg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jNv-jH-8Hl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="zZ0-1q-9Ry" kind="show" identifier="TaskView2AssignViewSegue" id="GOD-zl-ohe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGK-al-jc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2821" y="219"/>
+        </scene>
+        <!--Mask View Controller-->
+        <scene sceneID="Sbf-5b-d86">
+            <objects>
+                <viewController id="A0S-00-MD6" customClass="ALMaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="51h-1V-zo0"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ny-wt-RlI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qg9-EM-YEg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass to Player %d." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHs-Xi-USA" userLabel="tipsLabel">
+                                <rect key="frame" x="225" y="120" width="150" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYv-gR-dbI" userLabel="openButton">
+                                <rect key="frame" x="225" y="240" width="150" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="sri-Ii-QRb"/>
+                                </constraints>
+                                <state key="normal" title="Open">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bHs-Xi-USA" firstAttribute="top" secondItem="51h-1V-zo0" secondAttribute="bottom" constant="100" id="EhT-iK-DGQ"/>
+                            <constraint firstItem="bHs-Xi-USA" firstAttribute="width" secondItem="SYv-gR-dbI" secondAttribute="width" id="IRl-Mr-aRZ"/>
+                            <constraint firstItem="SYv-gR-dbI" firstAttribute="centerX" secondItem="bHs-Xi-USA" secondAttribute="centerX" id="dse-jy-sIo"/>
+                            <constraint firstAttribute="centerX" secondItem="bHs-Xi-USA" secondAttribute="centerX" id="dwX-Kl-4BA"/>
+                            <constraint firstItem="SYv-gR-dbI" firstAttribute="top" secondItem="bHs-Xi-USA" secondAttribute="bottom" constant="100" id="wgC-cv-Afk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="zZ0-1q-9Ry" kind="show" identifier="MaskView2AssignViewSegue" id="JUF-4I-2fC"/>
+                        <segue destination="gKf-as-52K" kind="show" identifier="MaskView2PlayerViewSegue" id="Hrv-72-AZ8"/>
+                        <segue destination="MjZ-XE-TDd" kind="show" identifier="MaskView2ExecuteViewSegue" id="rx9-Vp-uKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQ0-WA-At7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="209"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JUF-4I-2fC"/>
+        <segue reference="jyz-Lx-9qo"/>
+        <segue reference="rx9-Vp-uKr"/>
+    </inferredMetricsTieBreakers>
 </document>
