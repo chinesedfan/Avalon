@@ -10,7 +10,7 @@
 
 @implementation ALRole
 
-- (BOOL)isKnown:(ALRole *)otherRole {
+- (BOOL)canKnow:(ALRole *)otherRole {
     ALRoleType otherType = otherRole.roleType;
     switch (_roleType) {
         case ALRoleTypeMerlin:
@@ -99,7 +99,7 @@
         ALPlayer *player = playerArray[i];
         for (NSInteger j = 0; j < playerArray.count; j++) {
             ALPlayer *other = playerArray[j];
-            if ([player.role isKnown:other.role]) {
+            if ([player.role canKnow:other.role]) {
                 [player.knownArray addObject:other];
             }
         }
@@ -112,7 +112,7 @@
     // TODO: exchange the sequences of roles
 }
 
-+ (id)getDefaultLineupByPlayerNum:(NSInteger)playerNum {
++ (id)lineupWithPlayerNum:(NSInteger)playerNum {
     NSAssert((playerNum >= MIN_PLAYER_NUM && playerNum <= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
     ALLineup *lineup = [[ALLineup alloc] init];

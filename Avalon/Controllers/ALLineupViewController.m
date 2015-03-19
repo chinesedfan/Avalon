@@ -54,7 +54,7 @@
 - (void)updatePlayerNum:(NSInteger)playerNum {
     NSAssert((playerNum >= MIN_PLAYER_NUM && playerNum <= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
-    _lineup = [ALLineup getDefaultLineupByPlayerNum:playerNum];
+    _lineup = [ALLineup lineupWithPlayerNum:playerNum];
     [_cellContainerViewController reset];
     for (NSInteger i = 0; i < _lineup.roleArray.count; i++) {
         ALRole *role = _lineup.roleArray[i];

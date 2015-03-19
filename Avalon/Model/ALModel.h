@@ -30,10 +30,10 @@ typedef enum {
 @property (nonatomic, strong, readonly) NSString *roleName;
 @property (nonatomic, strong, readonly) NSString *roleImageName;
 
-- (BOOL)isKnown:(ALRole *)otherRole;
+- (BOOL)canKnow:(ALRole *)otherRole;
 
 + (id)roleWithRoleType:(ALRoleType)roleType;
-+ (NSInteger)getRoleNumFor:(ALRoleType) type withPlayerNum:(NSInteger)playerNum;
++ (NSInteger)getRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum;
 
 @end
 
@@ -52,6 +52,6 @@ typedef enum {
 
 - (NSArray *)generatePlayers;
 
-+ (id)getDefaultLineupByPlayerNum:(NSInteger)playerNum;
++ (id)lineupWithPlayerNum:(NSInteger)playerNum;
 
 @end
