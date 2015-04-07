@@ -33,7 +33,7 @@ typedef enum {
 - (BOOL)canKnow:(ALRole *)otherRole;
 
 + (id)roleWithRoleType:(ALRoleType)roleType;
-+ (NSInteger)getRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum;
++ (NSInteger)defaultRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum;
 
 @end
 

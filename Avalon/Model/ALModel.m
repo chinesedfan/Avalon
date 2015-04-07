@@ -35,7 +35,7 @@
     return role;
 }
 
-+ (NSInteger)getRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum {
++ (NSInteger)defaultRoleNumFor:(ALRoleType)type withPlayerNum:(NSInteger)playerNum {
     NSAssert((playerNum >= MIN_PLAYER_NUM && playerNum <= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
     // The Player Num:  5 6 7 8 9 10
@@ -117,7 +117,7 @@
     
     ALLineup *lineup = [[ALLineup alloc] init];
     for (ALRoleType i = 0; i < ALRoleTypeMax; i++) {
-        NSInteger roleCount = [ALRole getRoleNumFor:i withPlayerNum:playerNum];
+        NSInteger roleCount = [ALRole defaultRoleNumFor:i withPlayerNum:playerNum];
         for (NSInteger j = 0; j < roleCount; j++) {
             ALRole *role = [ALRole roleWithRoleType:i];
             [lineup.roleArray addObject:role];
