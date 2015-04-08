@@ -11,56 +11,38 @@
 #import "ALRoleCellView.h"
 #import "ALMaskViewController.h"
 
-@implementation ALLineupViewController {
-    // UI
-    __weak IBOutlet UIButton *_defaultLineupButton;
-    __weak IBOutlet UIButton *_customizedLineupButton;
-    __weak IBOutlet UIButton *_confirmButton;
-    
-    __weak IBOutlet UIPickerView *_playerNumPicker;
-    
-    ALCellContainerViewController *_cellContainerViewController;
-    
-    // Data
-    ALLineup *_lineup;
-}
+@interface ALLineupViewController ()
+
+// UI
+@property (weak, nonatomic) IBOutlet UIButton *defaultLineupButton;
+@property (weak, nonatomic) IBOutlet UIButton *customizedLineupButton;
+@property (weak, nonatomic) IBOutlet UIPickerView *playerNumPicker;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *roleCollectionView;
+
+// Data
+@property (nonatomic, strong) ALLineup *lineup;
+
+@end
+
+@implementation ALLineupViewController
 
 - (void)viewDidLoad {
-    [self configSubviews];
-    [self configConstraints];
+    //[self.roleCollectionView registerClass:[ALRoleCellView class] forCellWithReuseIdentifier:[ALRoleCellView cellId]];
     
     [self updatePlayerNum:MIN_PLAYER_NUM];
-}
-
-- (void)configSubviews {
-    _cellContainerViewController = [[ALCellContainerViewController alloc] initWithRow:5 andCol:2];
-    [self.view addSubview:_cellContainerViewController.view];
-}
-
-- (void)configConstraints {
-    NSDictionary *vs = @{
-            @"defaultBtn": _defaultLineupButton,
-            @"customizedBtn": _customizedLineupButton,
-            @"confirmBtn": _confirmButton,
-            @"numPicker": _playerNumPicker,
-            @"containerView": _cellContainerViewController.view
-    };
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[defaultBtn][numPicker][confirmBtn]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[numPicker][containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
 }
 
 - (void)updatePlayerNum:(NSInteger)playerNum {
     NSAssert((playerNum >= MIN_PLAYER_NUM && playerNum <= MAX_PLAYER_NUM), @"Unsupported player num: %ld", playerNum);
     
-    _lineup = [ALLineup lineupWithPlayerNum:playerNum];
-    [_cellContainerViewController reset];
-    for (NSInteger i = 0; i < _lineup.roleArray.count; i++) {
-        ALRole *role = _lineup.roleArray[i];
-        ALRoleCellView *roleCellView = [[ALRoleCellView alloc] initWithRole:role];
-        [_cellContainerViewController addCell:roleCellView];
-    }
+    self.lineup = [ALLineup lineupWithPlayerNum:playerNum];
+    [self.roleCollectionView reloadData];
+}
+
+#pragma mark - Action Handlers
+- (IBAction)confirmButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"LineupView2MaskViewSegue" sender:self];
 }
 
 #pragma mark - PickerView DataSource
@@ -81,14 +63,21 @@
     [self updatePlayerNum:row + MIN_PLAYER_NUM];
 }
 
-#pragma mark - Action Handlers
-- (IBAction)confirmButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"LineupView2MaskViewSegue" sender:self];
+#pragma mark - CollectionView DataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.lineup.roleArray.count;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALMaskViewController *playerViewController = segue.destinationViewController;
-    playerViewController.lineup = _lineup;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ALRoleCellView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"idALRoleCellView" forIndexPath:indexPath];
+    cell.role = self.lineup.roleArray[indexPath.row];
+    cell.backgroundColor = [UIColor redColor];
+    return cell;
+}
+
+#pragma mark - CollectionView Delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    //TODO:
 }
 
 @end

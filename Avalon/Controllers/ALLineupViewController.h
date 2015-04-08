@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALLineupViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ALLineupViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

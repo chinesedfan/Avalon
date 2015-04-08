@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALRoleCellView : UIView
+@interface ALRoleCellView : UICollectionViewCell
 
-- (id)initWithRole:(ALRole *)role;
+@property (nonatomic, strong) ALRole *role;
 
 @end

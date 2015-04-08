@@ -8,18 +8,21 @@
 
 #import "ALRoleCellView.h"
 
-@implementation ALRoleCellView {
-    ALRole *_role;
-    
-    UIImageView *_roleImageView;
-    UIButton *_increaseButton;
-    UIButton *_decreaseButton;
-}
+@interface ALRoleCellView ()
+
+// UI
+@property (nonatomic, strong) UIImageView *roleImageView;
+@property (nonatomic, strong) UIButton *increaseButton;
+@property (nonatomic, strong) UIButton *decreaseButton;
+
+@end
+
+@implementation ALRoleCellView
 
 - (id)initWithRole:(ALRole *)role {
     self = [super init];
     if (self) {
-        _role = role;
+        self.role = role;
 
         [self configSubviews];
         [self configConstraints];
@@ -28,16 +31,16 @@
 }
 
 - (void)configSubviews {
-    _roleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_role.roleImageName]];
-    [self addSubview:_roleImageView];
+    self.roleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.role.roleImageName]];
+    [self addSubview:self.roleImageView];
     
-    _increaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_increaseButton addTarget:self action:@selector(increaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_increaseButton];
+    self.increaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.increaseButton addTarget:self action:@selector(increaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.increaseButton];
     
-    _decreaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_decreaseButton addTarget:self action:@selector(decreaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_decreaseButton];
+    self.decreaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.decreaseButton addTarget:self action:@selector(decreaseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.decreaseButton];
     
     self.backgroundColor = [UIColor blueColor];
 }
@@ -52,12 +55,12 @@
 
 - (void)configConstraints {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    _roleImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    _increaseButton.translatesAutoresizingMaskIntoConstraints = NO;
-    _decreaseButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.roleImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.increaseButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.decreaseButton.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_roleImageView)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_roleImageView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[self.roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(self.roleImageView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[self.roleImageView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(self.roleImageView)]];[self reuseIdentifier];
 }
 
 @end
