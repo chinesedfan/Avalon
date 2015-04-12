@@ -10,6 +10,6 @@
 
 @interface ALRoleCellView : UICollectionViewCell
 
-@property (nonatomic, strong) ALRole *role;
+- (void)updateWithRole:(ALRole *)role;
 
 @end

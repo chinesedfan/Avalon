@@ -28,7 +28,7 @@
 @implementation ALLineupViewController
 
 - (void)viewDidLoad {
-    //[self.roleCollectionView registerClass:[ALRoleCellView class] forCellWithReuseIdentifier:[ALRoleCellView cellId]];
+    [self.roleCollectionView registerNib:[UINib nibWithNibName:@"ALRoleCellView" bundle:nil]  forCellWithReuseIdentifier:@"idALRoleCellView"];
     
     [self updatePlayerNum:MIN_PLAYER_NUM];
 }
@@ -70,7 +70,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ALRoleCellView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"idALRoleCellView" forIndexPath:indexPath];
-    cell.role = self.lineup.roleArray[indexPath.row];
+    [cell updateWithRole:self.lineup.roleArray[indexPath.row]];
     cell.backgroundColor = [UIColor redColor];
     return cell;
 }

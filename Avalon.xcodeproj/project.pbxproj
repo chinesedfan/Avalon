@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27281DB61ADA75200087EE75 /* ALRoleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27281DB41ADA75200087EE75 /* ALRoleCellView.m */; };
+		27281DB71ADA75200087EE75 /* ALRoleCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27281DB51ADA75200087EE75 /* ALRoleCellView.xib */; };
 		273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E888D1A621C2000C21620 /* ALPlayerCellView.m */; };
-		273E88911A62208100C21620 /* ALRoleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88901A62208100C21620 /* ALRoleCellView.m */; };
 		273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88931A62277200C21620 /* ALCellContainerViewController.m */; };
 		273E88971A62403600C21620 /* ALLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88961A62403600C21620 /* ALLineupViewController.m */; };
 		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
@@ -39,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27281DB31ADA75200087EE75 /* ALRoleCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleCellView.h; path = Views/ALRoleCellView.h; sourceTree = "<group>"; };
+		27281DB41ADA75200087EE75 /* ALRoleCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleCellView.m; path = Views/ALRoleCellView.m; sourceTree = "<group>"; };
+		27281DB51ADA75200087EE75 /* ALRoleCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALRoleCellView.xib; path = Views/ALRoleCellView.xib; sourceTree = "<group>"; };
 		273E888C1A621C2000C21620 /* ALPlayerCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayerCellView.h; path = Views/ALPlayerCellView.h; sourceTree = "<group>"; };
 		273E888D1A621C2000C21620 /* ALPlayerCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayerCellView.m; path = Views/ALPlayerCellView.m; sourceTree = "<group>"; };
-		273E888F1A62208100C21620 /* ALRoleCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRoleCellView.h; path = Views/ALRoleCellView.h; sourceTree = "<group>"; };
-		273E88901A62208100C21620 /* ALRoleCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRoleCellView.m; path = Views/ALRoleCellView.m; sourceTree = "<group>"; };
 		273E88921A62277200C21620 /* ALCellContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCellContainerViewController.h; path = Controllers/ALCellContainerViewController.h; sourceTree = "<group>"; };
 		273E88931A62277200C21620 /* ALCellContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCellContainerViewController.m; path = Controllers/ALCellContainerViewController.m; sourceTree = "<group>"; };
 		273E88951A62403600C21620 /* ALLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALLineupViewController.h; path = Controllers/ALLineupViewController.h; sourceTree = "<group>"; };
@@ -103,8 +105,9 @@
 			children = (
 				273E888C1A621C2000C21620 /* ALPlayerCellView.h */,
 				273E888D1A621C2000C21620 /* ALPlayerCellView.m */,
-				273E888F1A62208100C21620 /* ALRoleCellView.h */,
-				273E88901A62208100C21620 /* ALRoleCellView.m */,
+				27281DB31ADA75200087EE75 /* ALRoleCellView.h */,
+				27281DB41ADA75200087EE75 /* ALRoleCellView.m */,
+				27281DB51ADA75200087EE75 /* ALRoleCellView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279C284D1A5FBF060094F467 /* Main.storyboard in Resources */,
+				27281DB71ADA75200087EE75 /* ALRoleCellView.xib in Resources */,
 				279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */,
 				279C284F1A5FBF060094F467 /* Images.xcassets in Resources */,
 			);
@@ -312,8 +316,8 @@
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
-				273E88911A62208100C21620 /* ALRoleCellView.m in Sources */,
 				273E88971A62403600C21620 /* ALLineupViewController.m in Sources */,
+				27281DB61ADA75200087EE75 /* ALRoleCellView.m in Sources */,
 				27F698801A6BA4BA00C33C70 /* ALAssignViewController.m in Sources */,
 				27F698831A6BA50C00C33C70 /* ALVoteViewController.m in Sources */,
 				27F698861A6BA5BE00C33C70 /* ALExecuteViewController.m in Sources */,

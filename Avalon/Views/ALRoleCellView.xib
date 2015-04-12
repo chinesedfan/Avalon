@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="ALRoleCellView">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="173"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFw-Ul-FEz" userLabel="decreaseButton">
+                        <rect key="frame" x="99.5" y="143" width="99.5" height="30"/>
+                        <state key="normal" title="-">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7q-dH-J5J" userLabel="nameLabel">
+                        <rect key="frame" x="78.5" y="76.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TQ-jq-vHa" userLabel="increaseButton">
+                        <rect key="frame" x="0.0" y="143" width="99.5" height="30"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="JFw-Ul-FEz" firstAttribute="leading" secondItem="4TQ-jq-vHa" secondAttribute="trailing" id="5NA-ga-UGa"/>
+                <constraint firstItem="JFw-Ul-FEz" firstAttribute="width" secondItem="4TQ-jq-vHa" secondAttribute="width" id="ERL-7F-VE8"/>
+                <constraint firstAttribute="centerY" secondItem="f7q-dH-J5J" secondAttribute="centerY" id="EU2-Ef-FQM"/>
+                <constraint firstItem="4TQ-jq-vHa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cmz-df-fBZ"/>
+                <constraint firstAttribute="bottom" secondItem="4TQ-jq-vHa" secondAttribute="bottom" id="efg-0t-feu"/>
+                <constraint firstAttribute="bottom" secondItem="JFw-Ul-FEz" secondAttribute="bottom" id="hly-kw-HIe"/>
+                <constraint firstAttribute="trailing" secondItem="JFw-Ul-FEz" secondAttribute="trailing" id="sh9-ic-15g"/>
+                <constraint firstAttribute="centerX" secondItem="f7q-dH-J5J" secondAttribute="centerX" id="vit-Lo-9gR"/>
+            </constraints>
+            <size key="customSize" width="199" height="173"/>
+            <connections>
+                <outlet property="decreaseButton" destination="JFw-Ul-FEz" id="Zjc-cM-onA"/>
+                <outlet property="increaseButton" destination="4TQ-jq-vHa" id="zyd-yQ-qaL"/>
+                <outlet property="nameLabel" destination="f7q-dH-J5J" id="oV6-Rx-cab"/>
+            </connections>
+            <point key="canvasLocation" x="271.5" y="357.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
