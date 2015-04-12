@@ -29,6 +29,38 @@
     }
 }
 
+- (void)setRoleType:(ALRoleType)roleType {
+    switch (roleType) {
+        case ALRoleTypeMerlin:
+            _roleName = @"Merlin";
+            break;
+        case ALRoleTypePercival:
+            _roleName = @"Percival";
+            break;
+        case ALRoleTypeLoyalist:
+            _roleName = @"Loyalist";
+            break;
+        case ALRoleTypeMorgana:
+            _roleName = @"Morgana";
+            break;
+        case ALRoleTypeAssassinator:
+            _roleName = @"Assassinator";
+            break;
+        case ALRoleTypeMordred:
+            _roleName = @"Mordred";
+            break;
+        case ALRoleTypeOberon:
+            _roleName = @"Oberon";
+            break;
+        case ALRoleTypePawn:
+            _roleName = @"Pawn";
+            break;
+        default:
+            _roleName = @"Unkown";
+            break;
+    }
+}
+
 + (id)roleWithRoleType:(ALRoleType)roleType {
     ALRole *role = [[ALRole alloc] init];
     role.roleType = roleType;
