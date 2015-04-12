@@ -127,6 +127,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-S1-Fmu">
+                                <rect key="frame" x="272" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="gKf-as-52K" eventType="touchUpInside" id="M1G-q1-fKK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -137,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iii-YF-zJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="-665"/>
+            <point key="canvasLocation" x="2071" y="-673"/>
         </scene>
         <!--Assign View Controller-->
         <scene sceneID="zSX-ub-mo4">
@@ -150,6 +159,17 @@
                     <view key="view" contentMode="scaleToFill" id="fAt-82-WMA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKl-z3-cR5">
+                                <rect key="frame" x="277" y="275" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="zZ0-1q-9Ry" eventType="touchUpInside" id="FLO-hE-Zd5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -158,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uu-wA-VGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="1085"/>
+            <point key="canvasLocation" x="1141" y="1077"/>
         </scene>
         <!--Vote View Controller-->
         <scene sceneID="gSh-Wk-EHO">
@@ -171,16 +191,26 @@
                     <view key="view" contentMode="scaleToFill" id="xyR-2p-WGb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbm-Ne-AON">
+                                <rect key="frame" x="251" y="206" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="IVV-Vg-zJP" eventType="touchUpInside" id="z13-Sc-aGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="zZ0-1q-9Ry" kind="show" identifier="VoteView2AssignViewSegue" id="p63-mJ-NKY"/>
-                        <segue destination="MjZ-XE-TDd" kind="show" identifier="VoteView2ExecuteViewSegue" id="vWK-NK-hOy"/>
+                        <segue destination="A0S-00-MD6" kind="show" identifier="VoteView2MaskViewSegue" id="wmi-9J-znd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xe-pd-CJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="1085"/>
+            <point key="canvasLocation" x="223" y="1077"/>
         </scene>
         <!--Execute View Controller-->
         <scene sceneID="Wmu-ns-Mz2">
@@ -193,16 +223,26 @@
                     <view key="view" contentMode="scaleToFill" id="oeP-he-TIB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0O-ho-1oD">
+                                <rect key="frame" x="277" y="277" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="MjZ-XE-TDd" eventType="touchUpInside" id="y8l-Rt-UT5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <segue destination="A0S-00-MD6" kind="show" identifier="ExecuteView2MaskViewSegue" id="jyz-Lx-9qo"/>
-                        <segue destination="HP2-SK-LUz" kind="show" identifier="ExecuteView2TaskViewSegue" id="nRo-Hx-pZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXJ-7q-Cgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="1085"/>
+            <point key="canvasLocation" x="2071" y="209"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="r2v-OU-hhK">
@@ -215,15 +255,26 @@
                     <view key="view" contentMode="scaleToFill" id="jNv-jH-8Hl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTI-kZ-dkB">
+                                <rect key="frame" x="293" y="273" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmButtonAction:" destination="HP2-SK-LUz" eventType="touchUpInside" id="DIg-hj-aHK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="zZ0-1q-9Ry" kind="show" identifier="TaskView2AssignViewSegue" id="GOD-zl-ohe"/>
+                        <segue destination="A0S-00-MD6" kind="show" identifier="TaskView2MaskViewSegue" id="BRx-NJ-hbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGK-al-jc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2821" y="219"/>
+            <point key="canvasLocation" x="2071" y="1077"/>
         </scene>
         <!--Mask View Controller-->
         <scene sceneID="Sbf-5b-d86">
@@ -253,6 +304,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goNextButtonAction:" destination="A0S-00-MD6" eventType="touchUpInside" id="EWZ-rc-Ybq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -265,9 +319,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goNextButton" destination="SYv-gR-dbI" id="Ya6-V3-jlV"/>
+                        <outlet property="tipsLabel" destination="bHs-Xi-USA" id="R4k-c7-rKU"/>
                         <segue destination="zZ0-1q-9Ry" kind="show" identifier="MaskView2AssignViewSegue" id="JUF-4I-2fC"/>
                         <segue destination="gKf-as-52K" kind="show" identifier="MaskView2PlayerViewSegue" id="Hrv-72-AZ8"/>
                         <segue destination="MjZ-XE-TDd" kind="show" identifier="MaskView2ExecuteViewSegue" id="rx9-Vp-uKr"/>
+                        <segue destination="HP2-SK-LUz" kind="show" identifier="MaskView2TaskViewSegue" id="HYi-0p-VOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQ0-WA-At7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,8 +333,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ukc-uR-omJ"/>
-        <segue reference="rx9-Vp-uKr"/>
-        <segue reference="GOD-zl-ohe"/>
+        <segue reference="BRx-NJ-hbl"/>
     </inferredMetricsTieBreakers>
 </document>

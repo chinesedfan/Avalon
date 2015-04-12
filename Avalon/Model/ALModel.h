@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "ALDefinition.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, ALGamePhase) {
+    ALGamePhaseLineup,
+    ALGamePhasePlayer,
+    ALGamePhaseAssign,
+    ALGamePhaseExecute,
+    ALGamePhaseTask
+};
+
+typedef NS_ENUM(NSInteger, ALRoleType) {
     // the Author's
     ALRoleTypeMerlin,
     ALRoleTypePercival,
@@ -22,7 +30,7 @@ typedef enum {
     ALRoleTypePawn,
     // the max
     ALRoleTypeMax
-} ALRoleType;
+};
 
 @interface ALRole : NSObject
 

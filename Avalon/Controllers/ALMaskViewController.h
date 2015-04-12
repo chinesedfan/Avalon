@@ -10,6 +10,6 @@
 
 @interface ALMaskViewController : UIViewController
 
-@property (nonatomic, strong) ALLineup *lineup;
+@property (nonatomic, assign) ALGamePhase gamePhase;
 
 @end

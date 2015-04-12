@@ -7,7 +7,17 @@
 //
 
 #import "ALExecuteViewController.h"
+#import "ALMaskViewController.h"
 
 @implementation ALExecuteViewController
+
+- (IBAction)confirmButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"ExecuteView2MaskViewSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ALMaskViewController *maskViewController = segue.destinationViewController;
+    maskViewController.gamePhase = ALGamePhaseTask;
+}
 
 @end

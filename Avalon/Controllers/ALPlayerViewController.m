@@ -7,6 +7,7 @@
 //
 
 #import "ALPlayerViewController.h"
+#import "ALMaskViewController.h"
 #import "ALCellContainerViewController.h"
 #import "ALPlayerCellView.h"
 
@@ -20,6 +21,9 @@
 }
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    return;
+    
     [self configSubviews];
     [self configConstraints];
     
@@ -38,6 +42,16 @@
                          };
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[tipsLabel][containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+}
+
+- (IBAction)confirmButtonAction:(id)sender {
+    NSLog(@"abc");
+    [self performSegueWithIdentifier:@"PlayerView2MaskViewSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ALMaskViewController *maskViewController = segue.destinationViewController;
+    maskViewController.gamePhase = ALGamePhaseAssign;
 }
 
 - (void)setLineup:(ALLineup *)lineup {

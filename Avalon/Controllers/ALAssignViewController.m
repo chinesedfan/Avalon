@@ -7,7 +7,12 @@
 //
 
 #import "ALAssignViewController.h"
+#import "ALMaskViewController.h"
 
 @implementation ALAssignViewController
+
+- (IBAction)confirmButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"AssignView2VoteViewSegue" sender:self];
+}
 
 @end
