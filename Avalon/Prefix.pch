@@ -9,6 +9,10 @@
 #ifndef Avalon_Prefix_h
 #define Avalon_Prefix_h
 
-#import "ALModel.h"
+#import "ALDefinition.h"
+#import "ALRole.h"
+#import "ALPlayer.h"
+#import "ALLineup.h"
+#import "ALGame.h"
 
 #endif

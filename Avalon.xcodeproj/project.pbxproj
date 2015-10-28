@@ -12,7 +12,6 @@
 		273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E888D1A621C2000C21620 /* ALPlayerCellView.m */; };
 		273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88931A62277200C21620 /* ALCellContainerViewController.m */; };
 		273E88971A62403600C21620 /* ALLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E88961A62403600C21620 /* ALLineupViewController.m */; };
-		275526031A611894009CCEDB /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 275526021A611894009CCEDB /* ALModel.m */; };
 		279C28441A5FBF060094F467 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28431A5FBF060094F467 /* main.m */; };
 		279C28471A5FBF060094F467 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28461A5FBF060094F467 /* AppDelegate.m */; };
 		279C284A1A5FBF060094F467 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C28491A5FBF060094F467 /* ViewController.m */; };
@@ -21,6 +20,10 @@
 		279C28521A5FBF060094F467 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279C28501A5FBF060094F467 /* LaunchScreen.xib */; };
 		279C285E1A5FBF060094F467 /* AvalonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C285D1A5FBF060094F467 /* AvalonTests.m */; };
 		27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */; };
+		27D68F861BE0784100118C2A /* ALRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D68F851BE0784100118C2A /* ALRole.m */; settings = {ASSET_TAGS = (); }; };
+		27D68F891BE078E800118C2A /* ALPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D68F881BE078E800118C2A /* ALPlayer.m */; settings = {ASSET_TAGS = (); }; };
+		27D68F8F1BE0792C00118C2A /* ALLineup.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D68F8E1BE0792C00118C2A /* ALLineup.m */; settings = {ASSET_TAGS = (); }; };
+		27D68F921BE079D600118C2A /* ALGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D68F911BE079D600118C2A /* ALGame.m */; settings = {ASSET_TAGS = (); }; };
 		27F6987D1A6BA2FA00C33C70 /* ALMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6987C1A6BA2FA00C33C70 /* ALMaskViewController.m */; };
 		27F698801A6BA4BA00C33C70 /* ALAssignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6987F1A6BA4BA00C33C70 /* ALAssignViewController.m */; };
 		27F698831A6BA50C00C33C70 /* ALVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F698821A6BA50C00C33C70 /* ALVoteViewController.m */; };
@@ -49,8 +52,6 @@
 		273E88931A62277200C21620 /* ALCellContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCellContainerViewController.m; path = Controllers/ALCellContainerViewController.m; sourceTree = "<group>"; };
 		273E88951A62403600C21620 /* ALLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALLineupViewController.h; path = Controllers/ALLineupViewController.h; sourceTree = "<group>"; };
 		273E88961A62403600C21620 /* ALLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALLineupViewController.m; path = Controllers/ALLineupViewController.m; sourceTree = "<group>"; };
-		275526011A611894009CCEDB /* ALModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALModel.h; path = Model/ALModel.h; sourceTree = "<group>"; };
-		275526021A611894009CCEDB /* ALModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALModel.m; path = Model/ALModel.m; sourceTree = "<group>"; };
 		2755260B1A616BCC009CCEDB /* ALDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDefinition.h; path = Model/ALDefinition.h; sourceTree = "<group>"; };
 		2755260C1A616F16009CCEDB /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		279C283E1A5FBF060094F467 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +69,14 @@
 		279C285D1A5FBF060094F467 /* AvalonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvalonTests.m; sourceTree = "<group>"; };
 		27BC6FAB1A63D36F007B4909 /* ALPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayerViewController.h; path = Controllers/ALPlayerViewController.h; sourceTree = "<group>"; };
 		27BC6FAC1A63D36F007B4909 /* ALPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayerViewController.m; path = Controllers/ALPlayerViewController.m; sourceTree = "<group>"; };
+		27D68F841BE0784100118C2A /* ALRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALRole.h; path = Model/ALRole.h; sourceTree = "<group>"; };
+		27D68F851BE0784100118C2A /* ALRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALRole.m; path = Model/ALRole.m; sourceTree = "<group>"; };
+		27D68F871BE078E800118C2A /* ALPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALPlayer.h; path = Model/ALPlayer.h; sourceTree = "<group>"; };
+		27D68F881BE078E800118C2A /* ALPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALPlayer.m; path = Model/ALPlayer.m; sourceTree = "<group>"; };
+		27D68F8D1BE0792C00118C2A /* ALLineup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALLineup.h; path = Model/ALLineup.h; sourceTree = "<group>"; };
+		27D68F8E1BE0792C00118C2A /* ALLineup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALLineup.m; path = Model/ALLineup.m; sourceTree = "<group>"; };
+		27D68F901BE079D600118C2A /* ALGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALGame.h; path = Model/ALGame.h; sourceTree = "<group>"; };
+		27D68F911BE079D600118C2A /* ALGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALGame.m; path = Model/ALGame.m; sourceTree = "<group>"; };
 		27F6987B1A6BA2FA00C33C70 /* ALMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALMaskViewController.h; path = Controllers/ALMaskViewController.h; sourceTree = "<group>"; };
 		27F6987C1A6BA2FA00C33C70 /* ALMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALMaskViewController.m; path = Controllers/ALMaskViewController.m; sourceTree = "<group>"; };
 		27F6987E1A6BA4BA00C33C70 /* ALAssignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAssignViewController.h; path = Controllers/ALAssignViewController.h; sourceTree = "<group>"; };
@@ -116,8 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				2755260B1A616BCC009CCEDB /* ALDefinition.h */,
-				275526011A611894009CCEDB /* ALModel.h */,
-				275526021A611894009CCEDB /* ALModel.m */,
+				27D68F841BE0784100118C2A /* ALRole.h */,
+				27D68F851BE0784100118C2A /* ALRole.m */,
+				27D68F871BE078E800118C2A /* ALPlayer.h */,
+				27D68F881BE078E800118C2A /* ALPlayer.m */,
+				27D68F8D1BE0792C00118C2A /* ALLineup.h */,
+				27D68F8E1BE0792C00118C2A /* ALLineup.m */,
+				27D68F901BE079D600118C2A /* ALGame.h */,
+				27D68F911BE079D600118C2A /* ALGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -313,18 +328,21 @@
 			files = (
 				27F698891A6BAAA100C33C70 /* ALTaskViewController.m in Sources */,
 				273E888E1A621C2000C21620 /* ALPlayerCellView.m in Sources */,
+				27D68F861BE0784100118C2A /* ALRole.m in Sources */,
 				279C284A1A5FBF060094F467 /* ViewController.m in Sources */,
 				27BC6FAD1A63D36F007B4909 /* ALPlayerViewController.m in Sources */,
+				27D68F8F1BE0792C00118C2A /* ALLineup.m in Sources */,
 				279C28471A5FBF060094F467 /* AppDelegate.m in Sources */,
+				27D68F891BE078E800118C2A /* ALPlayer.m in Sources */,
 				273E88971A62403600C21620 /* ALLineupViewController.m in Sources */,
 				27281DB61ADA75200087EE75 /* ALRoleCellView.m in Sources */,
 				27F698801A6BA4BA00C33C70 /* ALAssignViewController.m in Sources */,
 				27F698831A6BA50C00C33C70 /* ALVoteViewController.m in Sources */,
 				27F698861A6BA5BE00C33C70 /* ALExecuteViewController.m in Sources */,
 				273E88941A62277200C21620 /* ALCellContainerViewController.m in Sources */,
-				275526031A611894009CCEDB /* ALModel.m in Sources */,
 				27F6988C1A6BAAD400C33C70 /* ALCheckViewController.m in Sources */,
 				279C28441A5FBF060094F467 /* main.m in Sources */,
+				27D68F921BE079D600118C2A /* ALGame.m in Sources */,
 				27F6987D1A6BA2FA00C33C70 /* ALMaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
