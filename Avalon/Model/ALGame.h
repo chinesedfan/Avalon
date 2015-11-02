@@ -13,7 +13,9 @@ typedef NS_ENUM(NSInteger, ALGamePhase) {
     ALGamePhasePlayer,
     ALGamePhaseAssign,
     ALGamePhaseExecute,
-    ALGamePhaseTask
+    ALGamePhaseTask,
+    ALGamePhaseKill,
+    ALGamePhaseResult
 };
 
 @interface ALGame : NSObject
@@ -27,7 +29,7 @@ typedef NS_ENUM(NSInteger, ALGamePhase) {
 @property (nonatomic, assign) NSInteger justiceWins, evilWins;
 @property (nonatomic, assign) ALGamePhase gamePhase;
 
-@property (nonatomic, strong) ALPlayer *currentPlayer;
+@property (nonatomic, strong) ALPlayer *currentPlayer, *currentAssigner, *currentExecutor;
 @property (nonatomic, strong) NSArray *executorArray; // ALPlayer[]
 
 + (ALGame *)instance;

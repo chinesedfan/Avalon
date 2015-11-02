@@ -43,17 +43,12 @@ static ALGame* gALGame = nil;
     self.playerNum = self.playerArray.count;
     
     self.gamePhase = ALGamePhasePlayer;
-    self.confirmedCount = 0;
-    self.currentPlayer = self.playerArray[self.confirmedCount];
 }
 
 - (void)playerConfirmRole {
     self.confirmedCount++;
     if (self.confirmedCount == self.playerNum) {
-        self.gamePhase = ALGamePhaseAssign;
-        self.gameRound = 1;
-        self.assignRound = 1;
-        self.currentPlayer = self.playerArray[0];
+        [self nextGameRound];
     } else {
         self.currentPlayer = self.playerArray[self.confirmedCount];
     }
@@ -67,15 +62,13 @@ static ALGame* gALGame = nil;
     if (isOK) {
         // passed - enter the execute phase
         self.gamePhase = ALGamePhaseExecute;
-        self.failedCount = 0;
-        self.confirmedCount = 0;
     } else if (self.assignRound == MAX_ASSIGN_ROUND) {
         // failed and reached the limit - treat as the evil side wins
         self.evilWins++;
         [self nextGameRound];
     } else {
         // failed but not reach the limit - ask the next player to assign
-        [self nextPlayer];
+        [self nextAssigner];
         self.assignRound++;
     }
 }
@@ -89,28 +82,49 @@ static ALGame* gALGame = nil;
     if (self.confirmedCount == self.executorArray.count) {
         self.gamePhase = ALGamePhaseTask;
     } else {
-        self.currentPlayer = self.playerArray[self.confirmedCount];
+        self.currentExecutor = self.executorArray[self.confirmedCount];
     }
 }
 
 - (BOOL)hasWonCurrentRound {
-    return YES;
+    return (self.failedCount < [ALGame defaultFailedLimitFor:self.gameRound withPlayerNum:self.playerNum]);
 }
 
 - (void)nextGameRound {
     self.gameRound++;
     self.gamePhase = ALGamePhaseAssign;
-    self.assignRound = 1;
-    [self nextPlayer];
 }
 
-- (ALPlayer *)nextPlayer {
-    NSInteger playerId = self.currentPlayer.playerId + 1;
+- (ALPlayer *)nextAssigner {
+    NSInteger playerId = self.currentAssigner.playerId + 1;
     if (playerId == self.playerNum) {
         playerId = 0;
     }
-    self.currentPlayer = self.playerArray[playerId];
-    return self.currentPlayer;
+    self.currentAssigner = self.playerArray[playerId];
+    return self.currentAssigner;
+}
+
+- (void)setGamePhase:(ALGamePhase)gamePhase {
+    _gamePhase = gamePhase;
+    
+    switch (gamePhase) {
+        case ALGamePhasePlayer:
+            self.confirmedCount = 0;
+            self.currentPlayer = self.playerArray[self.confirmedCount];
+            break;
+        case ALGamePhaseAssign:
+            self.assignRound = 1;
+            [self nextAssigner];
+            break;
+        case ALGamePhaseExecute:
+            self.failedCount = 0;
+            self.confirmedCount = 0;
+            self.currentExecutor = self.executorArray[self.confirmedCount];
+            break;
+        case ALGamePhaseTask:
+        default:
+            break;
+    }
 }
 
 @end
