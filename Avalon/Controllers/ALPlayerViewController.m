@@ -8,68 +8,30 @@
 
 #import "ALPlayerViewController.h"
 #import "ALMaskViewController.h"
-#import "ALCellContainerViewController.h"
 #import "ALPlayerCellView.h"
 
-@implementation ALPlayerViewController {
+@interface ALPlayerViewController ()
 
-    __weak IBOutlet UILabel *_roleTipsLabel;
-    ALCellContainerViewController *_cellContainerViewController;
-    
-    NSArray *_playerArray; // ALPlayer[]
-    NSInteger _currentPlayerIndex;
-}
+@property (weak, nonatomic) IBOutlet UILabel *roleTipsLabel;
+
+@end
+
+@implementation ALPlayerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    return;
     
-    [self configSubviews];
-    [self configConstraints];
-    
-    [self showPlayerInfo];
+    [self configWithPlayer:[ALGame instance].currentPlayer];
 }
 
-- (void)configSubviews {
-    _cellContainerViewController = [[ALCellContainerViewController alloc] initWithRow:2 andCol:2];
-    [self.view addSubview:_cellContainerViewController.view];
-}
-
-- (void)configConstraints {
-    NSDictionary *vs = @{
-                         @"tipsLabel": _roleTipsLabel,
-                         @"containerView": _cellContainerViewController.view
-                         };
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[tipsLabel][containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[containerView]|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:vs]];
+- (void)configWithPlayer:(ALPlayer *)player {
+    self.roleTipsLabel.text = [NSString stringWithFormat:@"Player %@", @(player.playerId)];
 }
 
 - (IBAction)confirmButtonAction:(id)sender {
-    NSLog(@"abc");
-    [self performSegueWithIdentifier:@"PlayerView2MaskViewSegue" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALMaskViewController *maskViewController = segue.destinationViewController;
-    maskViewController.gamePhase = ALGamePhaseAssign;
-}
-
-- (void)setLineup:(ALLineup *)lineup {
-    _lineup = lineup;
-    _playerArray = [lineup generatePlayers];
-    _currentPlayerIndex = -1;
-}
-
-- (void)showPlayerInfo {
-    _currentPlayerIndex++;
-    [_cellContainerViewController reset];
+    [[ALGame instance] playerConfirmRole];
     
-    ALPlayer *player = _playerArray[_currentPlayerIndex];
-    for (NSInteger i = 0; i < player.knownArray.count; i++) {
-        ALPlayer *other = player.knownArray[i];
-        ALPlayerCellView *playerCellView = [[ALPlayerCellView alloc] initWithPlayerId:other.playerId];
-        [_cellContainerViewController addCell:playerCellView];
-    }
+    [self performSegueWithIdentifier:@"PlayerView2MaskViewSegue" sender:self];
 }
 
 @end

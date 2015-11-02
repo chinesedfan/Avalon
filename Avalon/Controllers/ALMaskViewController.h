@@ -10,6 +10,4 @@
 
 @interface ALMaskViewController : UIViewController
 
-@property (nonatomic, assign) ALGamePhase gamePhase;
-
 @end

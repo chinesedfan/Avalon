@@ -10,6 +10,4 @@
 
 @interface ALPlayerViewController : UIViewController
 
-@property (nonatomic, strong) ALLineup *lineup;
-
 @end

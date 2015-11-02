@@ -12,12 +12,9 @@
 @implementation ALTaskViewController
 
 - (IBAction)confirmButtonAction:(id)sender {
+    [[ALGame instance] nextGameRound];
+    
     [self performSegueWithIdentifier:@"TaskView2MaskViewSegue" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALMaskViewController *maskViewController = segue.destinationViewController;
-    maskViewController.gamePhase = ALGamePhaseAssign;
 }
 
 @end

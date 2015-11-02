@@ -12,6 +12,10 @@
 @implementation ALAssignViewController
 
 - (IBAction)confirmButtonAction:(id)sender {
+    NSArray *playerArray = [ALGame instance].playerArray;
+    NSArray *executorArray = [NSArray arrayWithObjects:playerArray[0], playerArray[1], nil];
+    [[ALGame instance] configExecutorArray:executorArray];
+    
     [self performSegueWithIdentifier:@"AssignView2VoteViewSegue" sender:self];
 }
 

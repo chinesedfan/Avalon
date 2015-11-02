@@ -12,6 +12,9 @@
 #define MIN_PLAYER_NUM  5
 #define MAX_PLAYER_NUM  10
 
+#define MAX_ASSIGN_ROUND  5
+#define MAX_GAME_ROUND    5
+
 #define i2s(i)  [NSString stringWithFormat:@"%ld", (i)]
 
 #endif

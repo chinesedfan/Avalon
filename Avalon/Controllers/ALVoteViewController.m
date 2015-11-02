@@ -12,12 +12,9 @@
 @implementation ALVoteViewController
 
 - (IBAction)confirmButtonAction:(id)sender {
+    [[ALGame instance] confirmAssignment:YES];
+    
     [self performSegueWithIdentifier:@"VoteView2MaskViewSegue" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALMaskViewController *maskViewController = segue.destinationViewController;
-    maskViewController.gamePhase = ALGamePhaseExecute;
 }
 
 @end

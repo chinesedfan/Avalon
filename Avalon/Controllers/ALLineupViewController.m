@@ -42,12 +42,9 @@
 
 #pragma mark - Action Handlers
 - (IBAction)confirmButtonAction:(id)sender {
+    [[ALGame instance] configLineup:self.lineup];
+    
     [self performSegueWithIdentifier:@"LineupView2MaskViewSegue" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ALMaskViewController *maskViewController = segue.destinationViewController;
-    maskViewController.gamePhase = ALGamePhasePlayer;
 }
 
 #pragma mark - PickerView DataSource

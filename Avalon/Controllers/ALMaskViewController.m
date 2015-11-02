@@ -24,23 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.gamePhase = self.gamePhase;
+    [self configWithGame:[ALGame instance]];
 }
 
-- (void)setGamePhase:(ALGamePhase)gamePhase {
-    _gamePhase = gamePhase;
-    
-    switch (gamePhase) {
+- (void)configWithGame:(ALGame *)game {
+    switch (game.gamePhase) {
         case ALGamePhasePlayer:
-            self.tipsLabel.text = @"Pass to Player x to confirm the role.";
+            self.tipsLabel.text = [NSString stringWithFormat:@"Pass to %@ to confirm the role.", @(game.currentPlayer.playerId)];
             self.segueId = @"MaskView2PlayerViewSegue";
             break;
         case ALGamePhaseAssign:
-            self.tipsLabel.text = @"Welcome Player x to assgin task participators.";
+            self.tipsLabel.text = [NSString stringWithFormat:@"Welcome %@ to assgin task participators.", @(game.currentPlayer.playerId)];
             self.segueId = @"MaskView2AssignViewSegue";
             break;
         case ALGamePhaseExecute:
-            self.tipsLabel.text = @"Allow Player x to execute the task.";
+            self.tipsLabel.text = [NSString stringWithFormat:@"Allow %@ to execute the task.", @(game.currentPlayer.playerId)];
             self.segueId = @"MaskView2ExecuteViewSegue";
             break;
         case ALGamePhaseTask:
